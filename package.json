@@ -1,0 +1,23 @@
+{
+  "name": "domestika-code",
+  "version": "1.0.0",
+  "description": "domestica code dependencies",
+  "main": "index.html",
+  "scripts": {
+    "server": "npx http-server .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gscottqueen/domestika-code.git"
+  },
+  "author": "gscottqueen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gscottqueen/domestika-code/issues"
+  },
+  "homepage": "https://github.com/gscottqueen/domestika-code#readme",
+  "dependencies": {
+    "http-server": "^14.1.0"
+  }
+}
