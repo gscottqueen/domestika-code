@@ -5,6 +5,7 @@
   "main": "index.html",
   "scripts": {
     "server": "npx http-server .",
+    "sketch-server": "canvas-sketch sketch.js --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/gscottqueen/domestika-code#readme",
   "dependencies": {
+    "canvas-sketch": "^0.7.5",
     "http-server": "^14.1.0"
   }
 }
