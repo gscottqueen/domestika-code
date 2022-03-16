@@ -51,6 +51,8 @@ const sketch = ({ context, width, height }) => {
       agent.update();
       agent.draw(context);
       agent.bounce(width, height);
+      // wrap from one side to the other
+      // agent.wrap(width, height);
     });
   };
 };
@@ -80,6 +82,11 @@ class Agent {
   bounce(width, height) {
     if (this.pos.x <= 0 || this.pos.x >= width) this.vel.x *= -1;
     if (this.pos.y <= 0 || this.pos.y >= height) this.vel.y *= -1;
+  }
+
+  wrap(width, height) {
+    if (this.pos.x <= 0 || this.pos.x >= width) this.pos.x = 0;
+    if (this.pos.y <= 0 || this.pos.y >= height) this.pos.y = 0;
   }
 
   update() {
