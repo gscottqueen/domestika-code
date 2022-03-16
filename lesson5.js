@@ -6,35 +6,26 @@ const settings = {
 
 const sketch = () => {
   return ({ context, width, height }) => {
-    context.fillStyle = 'black';
+    context.fillStyle = 'white';
     context.fillRect(0, 0, width, height)
-    context.lineWidth = width * 0.01;
-    context.strokeStyle = 'white';
 
-    const w = width * 0.10;
-    const h = height * 0.10;
-    const gap = width * 0.03;
-    const ix = width * 0.17;
-    const iy = height * 0.17;
-    const offset = width * 0.02;
-    let x, y;
+    context.fillStyle = 'black';
 
-    for (let i = 0; i < 5; i++) {
-      for (let j = 0; j < 5; j++) {
-        x = ix + (w + gap) * i;
-        y = iy + (h + gap) * j;
+    const x = width * 0.5;
+    const y = height * 0.5;
+    const w = width * 0.3;
+    const h = height * 0.3;
 
-        context.beginPath();
-        context.rect(x, y, w, h);
-        context.stroke();
+    context.save();
+    context.translate(x, y);
+    context.rotate(0.3);
 
-        if (Math.random() > 0.5) {
-          context.beginPath();
-          context.rect(x + offset / 2, y + offset / 2, w - offset, h - offset)
-          context.stroke();
-        }
-      }
-    }
+    context.beginPath();
+    context.rect(-w * 0.5, -h * 0.5, w, h);
+    context.fill();
+    context.restore();
+
+
   };
 };
 
