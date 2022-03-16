@@ -5,14 +5,6 @@ const settings = {
   dimensions: [ 1080, 1080 ]
 };
 
-// const math.degToRad = (degrees) => {
-//   return degrees / 180 * Math.PI
-// }
-
-// const random.range = (min, max) => {
-//   return Math.random() * (max - min) + min
-// }
-
 const sketch = () => {
   return ({ context, width, height }) => {
     context.fillStyle = 'white';
